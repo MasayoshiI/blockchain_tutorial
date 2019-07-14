@@ -37,5 +37,8 @@ class Client:
         return binascii.hexlify(self._public_key.exportKey(format='DER')).decode('ascii')
 
 
-masa = Client()
-print(masa.identity)
+
+def test():
+    masa = Client()
+    print(masa.identity)
+
