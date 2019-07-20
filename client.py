@@ -31,7 +31,8 @@ class Client:
     @property
     def identity(self):
         """ The identity is unique to each client and can be made publicly available. 
-        Anybody would be able to send virtual currency to you using this identity and it will get added to your wallet. """
+        Anybody would be able to send virtual currency to you using this identity and it will get added to your wallet.
+        Identity is the HEX representation of the public key """
         # DER is a binary format for data structures described
         # decoded in ascii format
         return binascii.hexlify(self._public_key.exportKey(format='DER')).decode('ascii')
